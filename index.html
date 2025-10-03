@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="es" data-bs-theme="auto">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,12 +9,135 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>Carousel Template · Bootstrap v5.3</title>
+    <title>Sabora Reposteria Fantasma</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="../assets/js/color-modes.js"></script>
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
     <link href="carousel.css" rel="stylesheet" />
+    <style>
+      .navbar {
+  background-color: #D9CCC1 !important;
+}
+.navbar .nav-link {
+  color: #A66844 !important; 
+  font-weight: bold; 
+  font-size: large
+  
+}
+.navbar-brand {
+  margin-right: 40px; /* Ajusta el valor según lo que quieras separar */
+}
+
+.navbar-nav {
+  gap: 25px; 
+}
+.navbar-brand img {
+  padding-right: 20px;
+}
+
+
+.btn-buscar {
+  color: #ffffff;               
+  background-color: #A66844;    
+  border: 1px solid #A66844;
+  font-weight: bold;
+}
+
+.btn-pedido {
+  color: #fff !important;          
+  background-color: #A66844!important;  
+  border: 1px solid #ebe6e3 !important;
+  font-weight: bold;
+  padding: 10px 20px;             
+  border-radius: 10px;            
+  transition: background-color 0.3s ease;
+}
+
+.btn-pedido:hover {
+  background-color: #5C3A26 !important; 
+  border-color: #5C3A26 !important;
+}
+
+
+.btn-buscar:hover {
+  background-color: #5C3A26;  
+  border-color: #5C3A26;
+}
+
+.btn-secondary {
+   background-color: #5C3A26 !important; 
+  border-color: #5C3A26 !important;
+
+}
+
+
+.navbar .nav-link:hover {
+  color: #592316 !important;  
+}
+.marketing h2 {
+  color:  #5C3A26 !important;  
+  font-weight: bold;  
+}
+ 
+ /* Fondo general de la sección Featurettes */
+  .featurette {
+    background-color: #f6ede7; /* Beige suave */
+    padding: 60px 40px; /* aire interno */
+    border-radius: 12px;
+    margin: 50px auto; /* aire externo */
+    max-width: 1100px; /* más centrado, no tan pegado a los bordes */
+  }
+
+ 
+  .featurette .col-md-7,
+  .featurette .col-md-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Títulos principales */
+  .featurette-heading {
+    color: #8b4513; /* café */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  /* Subtítulo dentro del h2 */
+  .featurette-heading span {
+    color: #c48a5a; /* un tono café claro/dorado */
+    font-style: italic;
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* Texto de párrafos */
+  .featurette p.lead {
+    color: #5a3e2b; /* café oscuro */
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto; /* centrado y con aire */
+  }
+  .antojate {
+    background: linear-gradient(135deg, #D9CCC1, #A87C6F); /* degradado cálido */
+  }
+  .antojate h2 {
+    color: #fff;
+    font-size: 2rem;
+  }
+  .antojate .promo-text {
+    font-size: 1.2rem;
+  }
+  .antojate img {
+    object-fit: cover;
+    height: 200px; /* 🔹 todas las fotos con la misma altura */
+  }
+
+
+    </style>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -64,19 +187,19 @@
         -webkit-overflow-scrolling: touch;
       }
       .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
+        --bd-violet-bg: #A66844;
         --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
         --bs-btn-font-weight: 600;
         --bs-btn-color: var(--bs-white);
         --bs-btn-bg: var(--bd-violet-bg);
         --bs-btn-border-color: var(--bd-violet-bg);
         --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-hover-bg:#A66844;
+        --bs-btn-hover-border-color: #A66844;
         --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
         --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
+        --bs-btn-active-bg: #A66844;
+        --bs-btn-active-border-color: #A66844;
       }
       .bd-mode-toggle {
         z-index: 1500;
@@ -88,6 +211,7 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+      
     </style>
   </head>
   <body>
@@ -186,10 +310,11 @@
         </li>
       </ul>
     </div>
-    <header data-bs-theme="dark">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <header data-bs-theme="light">
+      <nav class="navbar navbar-expand-md navbar-ligth fixed-top bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Carousel</a>
+          <a class="navbar-brand mx-auto" href="#">
+            <img src="img/lg sabora.png" alt="Logo sabora, reposteria Fantasma" width="100"></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -201,27 +326,31 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+          <br>
+          <br>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#myCarousel">Inicio</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <li class="nav-item"><a class="nav-link" href="#historia">Nosotros</a></li>
               </li>
+              <li class="nav-item"><a class="nav-link" href="#Productos">Productos</a></li>
+               <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#contacto">Contacto</a>  
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+           <form class="d-flex" role="search" onsubmit="return false;">
+           <input
+          id="buscador"
+          class="form-control me-2"
+          type="search"
+          placeholder="Buscar..."
+          aria-label="Buscar"
+          onkeyup="filtrar()"
+          />
+         <button class="btn btn-buscar" type="submit">Buscar</button>
+
+</form>
           </div>
         </div>
       </nav>
@@ -252,83 +381,31 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
-              height="100%"
-              preserveAspectRatio="xMidYMid slice"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
+          <img src="img/b 1 torta.png" alt=" banner torta" width="1290px">
             <div class="container">
               <div class="carousel-caption text-start">
-                <h1>Example headline.</h1>
-                <p class="opacity-75">
-                  Some representative placeholder content for the first slide of
-                  the carousel.
-                </p>
+
                 <p>
-                  <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
+                  <a class="btn btn-pedido" href="#">Haz tu pedido aqui</a>
                 </p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
-              height="100%"
-              preserveAspectRatio="xMidYMid slice"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
+           <img src="img/b chess 2.png" alt="banner cheescake" width="1600px">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>
-                  Some representative placeholder content for the second slide
-                  of the carousel.
-                </p>
-                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                <p><a class="btn btn-pedido" href="#">Haz tu pedido aqui</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
-              height="100%"
-              preserveAspectRatio="xMidYMid slice"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
+            <img src="img/b 3 galle.png" alt="banner galleta" width="1290">
             <div class="container">
               <div class="carousel-caption text-end">
-                <h1>One more for good measure.</h1>
+              
                 <p>
-                  Some representative placeholder content for the third slide of
-                  this carousel.
-                </p>
-                <p>
-                  <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
+                  <a class="btn btn-pedido" href="#">Haz tu pedido</a>
                 </p>
               </div>
             </div>
@@ -353,200 +430,162 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <!-- Marketing messaging and featurettes
+     <!-- Marketing messaging and featurettes 
   ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-      <div class="container marketing">
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <svg
-              aria-label="Placeholder"
-              class="bd-placeholder-img rounded-circle"
-              height="140"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="140"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
-            <h2 class="fw-normal">Heading</h2>
-            <p>
-              Some representative placeholder content for the three columns of
-              text below the carousel. This is the first column.
-            </p>
-            <p>
-              <a class="btn btn-secondary" href="#">View details &raquo;</a>
-            </p>
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <svg
-              aria-label="Placeholder"
-              class="bd-placeholder-img rounded-circle"
-              height="140"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="140"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
-            <h2 class="fw-normal">Heading</h2>
-            <p>
-              Another exciting bit of representative placeholder content. This
-              time, we've moved on to the second column.
-            </p>
-            <p>
-              <a class="btn btn-secondary" href="#">View details &raquo;</a>
-            </p>
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <svg
-              aria-label="Placeholder"
-              class="bd-placeholder-img rounded-circle"
-              height="140"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="140"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
-            <h2 class="fw-normal">Heading</h2>
-            <p>
-              And lastly this, the third column of representative placeholder
-              content.
-            </p>
-            <p>
-              <a class="btn btn-secondary" href="#">View details &raquo;</a>
-            </p>
-          </div>
-          <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-        <!-- START THE FEATURETTES -->
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">
-              First featurette heading.
-              <span class="text-body-secondary">It’ll blow your mind.</span>
-            </h2>
-            <p class="lead">
-              Some great placeholder content for the first featurette here.
-              Imagine some exciting prose here.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <svg
-              aria-label="Placeholder: 500x500"
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              height="500"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="500"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-bg)"
-              ></rect>
-              <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-                500x500
-              </text>
-            </svg>
-          </div>
-        </div>
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1">
-              Oh yeah, it’s that good.
-              <span class="text-body-secondary">See for yourself.</span>
-            </h2>
-            <p class="lead">
-              Another featurette? Of course. More placeholder content here to
-              give you an idea of how this layout would work with some actual
-              real-world content in place.
-            </p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <svg
-              aria-label="Placeholder: 500x500"
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              height="500"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="500"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-bg)"
-              ></rect>
-              <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-                500x500
-              </text>
-            </svg>
-          </div>
-        </div>
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">
-              And lastly, this one.
-              <span class="text-body-secondary">Checkmate.</span>
-            </h2>
-            <p class="lead">
-              And yes, this is the last block of representative placeholder
-              content. Again, not really intended to be actually read, simply
-              here to give you a better view of what this would look like with
-              some actual content. Your content.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <svg
-              aria-label="Placeholder: 500x500"
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              height="500"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="500"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-bg)"
-              ></rect>
-              <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-                500x500
-              </text>
-            </svg>
-          </div>
+<div  class="container marketing seccion-fondo historia">
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div id="Productos" class="col-lg-4">
+      <img 
+        src="img/P 1.png" 
+        alt="Torta 1" 
+        class="bd-placeholder-img rounded-circle"
+        width="250" 
+        height="250">
+      <h2 class="fw-normal">Tortas artesanales </h2>
+      <p>
+        Recetas clásicas y auténticas, hechas con amor para compartir en cada ocasión especial.
+      </p>
+      <p><a class="btn btn-secondary" href="#">Ver más &raquo;</a></p>
+    </div>
+    <!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img 
+        src="img/P 2.png" 
+        alt="Torta 2" 
+        class="bd-placeholder-img rounded-circle"
+        width="250" 
+        height="250">
+      <h2 class="fw-normal">Cheesecakes Irresistibles</h2>
+      <p>
+        Delicados, cremosos y con sabores únicos para endulzar tus mejores momentos.
+      </p>
+      <p><a class="btn btn-secondary" href="#">Ver más &raquo;</a></p>
+    </div>
+    <!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img 
+        src="img/P 3.png" 
+        alt="Torta 3" 
+        class="bd-placeholder-img rounded-circle"
+        width="250" 
+        height="250">
+      <h2 class="fw-normal">Galletas New York Style</h2>
+      <p>
+        Crujientes por fuera, suaves por dentro. Perfectas para regalar o disfrutar en casa.
+      </p>
+      <p><a class="btn btn-secondary" href="#">Ver más &raquo;</a></p>
+    </div>
+    <!-- /.col-lg-4 -->
+  </div>
+  <!-- /.row -->
+</div>
+
+        <hr id="historia" class="featurette-divider" />
+    <div class="row featurette">
+  <div class="col-md-7">
+    <h2  class="featurette-heading fw-normal lh-1">
+      Sabora. <span class="text-body-secondary">Reposteria con alma..</span>
+    </h2>
+    <br>
+    <p class="lead">En Sabora Repostería Fantasma creemos que cada bocado debe ser una experiencia mágica. Creamos tortas, cheesecakes y galletas con el equilibrio perfecto entre lo casero y lo gourmet, usando ingredientes frescos y recetas únicas que hacen que cada creación hable por sí misma.
+    </p> 
+    <br>
+
+        <p class="lead">
+Sabora Repostería Fantasma nació de un sueño muy sencillo pero poderoso: compartir la magia de lo hecho en casa. Soy Cristina, una apasionada de la cocina y la repostería, que siempre ha encontrado en los postres una forma de transmitir cariño y momentos especiales.  Este proyecto surge del deseo de ofrecer un concepto diferente: una “repostería fantasma”, donde lo importante no es un gran local físico, sino la calidad, el sabor auténtico y la experiencia que llega directo a la mesa de cada cliente.
+    </p>
+    <br>
+        <p class="lead">
+        
+
+Cada torta, cheesecake o galleta que preparo tiene un sello personal: lo artesanal, lo casero y lo elegante. Creo en los sabores que cuentan historias y en los detalles que hacen sonreír. Con Sabora, quiero invitarte a descubrir que el verdadero lujo está en disfrutar lo auténtico.
+    </p>
+    
+  </div>
+  <div  class="col-md-5">
+    <img src="img/historia 2.png" class="img-fluid mx-auto" width="500" height="500" alt="..."> <!-- 🔹 Imagen -->
+  </div>
+</div> <!-- 🔹 Sección Final: Antójate con Sabora -->
+<hr id class="featurette-divider" />
+
+<section class="antojate py-5 text-center text-light">
+  <div class="container">
+
+    <!-- Título y subtítulo -->
+    <h2 class="fw-bold mb-3">✨ Endulza tu momento con Sabora ✨</h2>
+    <p class="lead mb-4">
+      Cada postre cuenta una historia… hecha con dedicación, cariño y el toque único de nuestra repostería fantasma.
+    </p>
+
+    <!-- Galería de imágenes -->
+    <div class="row g-3 mb-4">
+      <div class="col-md-3 col-6">
+        <img src="img/galeria 1.png" class="img-fluid rounded shadow-sm" alt="Torta casera Zanahoria">
+      </div>
+      <div class="col-md-3 col-6">
+        <img src="img/galeria 2.png" class="img-fluid rounded shadow-sm" alt="Glletas">
+      </div>
+      <div class="col-md-3 col-6">
+        <img src="img/galeria 3.png" class="img-fluid rounded shadow-sm" alt="postre">
+      </div>
+      <div class="col-md-3 col-6">
+        <img src="img/galeria 4.png" class="img-fluid rounded shadow-sm" alt="chess cakes">
+      </div>
+    </div>
+
+    <!-- Promoción -->
+    <p class="promo-text fw-semibold mb-4">
+      🎁 Haz tu primer pedido y recibe un 
+      <span class="text-warning">10% de descuento</span> en tu compra.
+    </p>
+
+    <!-- Botones -->
+    <div class="d-flex justify-content-center gap-3">
+      <a href="#suscripcion" class="btn btn-warning fw-bold">Quiero mi descuento</a>
+      <a href="https://wa.me/573225809278" target="_blank" class="btn btn-outline-light fw-bold">Haz tu pedido ahora</a>
+    </div>
+
+  </div>
+</section>
+        <hr id="contacto" class="featurette-divider" />
+      
+
+<div class="row featurette seccion-contacto align-items-center">
+  <div class="col-md-6">
+    <h2 class="featurette-heading fw-normal lh-1">
+      Contáctanos
+      <span class="subtitulo">¡Estamos listos para endulzar tu día!</span>
+    </h2>
+    <p class="lead">
+      ¿Tienes un pedido especial, deseas personalizar tu torta o necesitas más información?  
+      Escríbenos y con gusto te responderemos lo antes posible.
+    </p>
+
+    <!-- Formulario -->
+    <form>
+      <div id="  class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="email" placeholder="tuemail@ejemplo.com">
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe tu mensaje..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-contacto">Enviar mensaje</button>
+    </form>
+  </div>
+
+  <!-- Imagen decorativa -->
+  <div class="col-md-6">
+    <img src="img/contacto.png" class="img-fluid mx-auto" alt="Imagen contacto">
+  </div>
+</div>
+
         </div>
         <hr class="featurette-divider" />
         <!-- /END THE FEATURETTES -->
@@ -561,7 +600,22 @@
         </p>
       </footer>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
+    <script>
+function filtrar() {
+  let input = document.getElementById("buscador").value.toLowerCase();
+  let items = document.querySelectorAll("#lista li");
+
+  items.forEach(item => {
+    if (item.textContent.toLowerCase().includes(input)) {
+      item.style.display = "";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+</script>
+
  
   </body>
 </html>
